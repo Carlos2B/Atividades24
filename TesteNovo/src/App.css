@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#tue {
+  height: 17em;
+  padding: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+#tue:hover {
+  filter: drop-shadow(0 0 2em #63098c);
+}
+
+.container{
+  border: 1px solid white;
+}
+
+.galeria{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.galeria_img{
+  width: 20em;
+  height: 15em;
+  border: 3px solid rgb(254, 5, 5);
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.galeria_img:hover{
+  filter: drop-shadow(0 0 2em #ff0000);
+}
