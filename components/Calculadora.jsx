@@ -6,6 +6,7 @@ const Calculadora = () => {
   const [num2, setNum2] = useState('');
   const [result, setResult] = useState('');
   const [operation, setOperation] = useState('+');
+  const [showResult, setShowResult] = useState(false);
 
   const calculate = () => {
     const number1 = parseFloat(num1);
@@ -23,13 +24,14 @@ const Calculadora = () => {
         res = number1 * number2;
         break;
       case '/':
-        res = number2 !== 0 ? number1 / number2 : 'Error';
+        res = number2 !== 0 ? number1 / number2 : 'Erro';
         break;
       default:
-        res = 'Invalid Operation';
+        res = 'Operação inválida';
     }
 
     setResult(res.toString());
+    setShowResult(true);
   };
 
   return (
@@ -56,7 +58,7 @@ const Calculadora = () => {
         <Button title="/" onPress={() => setOperation('/')} />
       </View>
       <Button title="Calcular" onPress={calculate} />
-      <Text style={styles.result}>Resultado: {result}</Text>
+      {showResult && <Text style={styles.result}>Resultado: {result}</Text>}
     </View>
   );
 };
@@ -82,6 +84,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
     marginBottom: 10,
   },
   result: {

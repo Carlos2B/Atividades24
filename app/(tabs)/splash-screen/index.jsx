@@ -11,7 +11,7 @@ export default splashScreen = () => {
         <LinearGradient  colors={['#ff7e5f', '#feb47b']} 
     style={styles.container}>
         <Image
-         source={require('../../assets/images/logo.png')}
+         source={require('../../../assets/images/logo.png')}
           style={styles.image}
         />
         </LinearGradient>

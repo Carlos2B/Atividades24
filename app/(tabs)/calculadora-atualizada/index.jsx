@@ -1,5 +1,5 @@
 import React from "react";
-import Calculadora from '../../components/Calculadora';
+import Calculadora from '../../../components/Calculadora';
 import {Text, View} from 'react-native';
 
 const style = function(){
@@ -9,6 +9,7 @@ const style = function(){
             justifyContent: 'center',
             alignItems: 'center',
         },
+
     })
 }
 
@@ -20,5 +21,3 @@ return <View style={style().container}>
     </View>;
 
 }
-
-
